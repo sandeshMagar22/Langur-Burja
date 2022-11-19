@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".MainActivity">
+
+    <GridLayout
+        android:id="@+id/dice_grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+
+        android:columnCount="3"
+        >
+
+        <ImageButton
+            android:id="@+id/clubsBtn"
+            android:src="@drawable/clubs"
+            android:elevation="100dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/kingsBtn"
+            android:src="@drawable/kings"
+            android:elevation="20dp"
+
+
+            />
+
+        <ImageButton
+            android:id="@+id/spadeBtn"
+            android:src="@drawable/spade"
+            android:elevation="20dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/heartBtn"
+            android:src="@drawable/heart"
+            android:elevation="20dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/flagBtn"
+            android:src="@drawable/flag"
+            android:elevation="20dp"
+
+            />
+
+        <ImageButton
+            android:id="@+id/diamondBtn"
+            android:src="@drawable/diamond"
+            android:elevation="20dp"
+
+            />
+
+
+
+
+
+
+
+
+
+    </GridLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_View_roll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="10dp"
+        android:background="@color/amber"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/dice_grid"
+        android:layout_marginBottom="20dp"
+        >
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Roll Dice"
+            android:id="@+id/roll_btn"
+            android:background="@color/amber"
+
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Selected Dice: "
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+       android:layout_below="@+id/card_View_roll"
+        android:id="@+id/selected_dice_msg"
+        android:gravity="center_horizontal"
+
+
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/selected_dice_msg"
+        android:layout_above="@+id/win_loose_msg"
+
+        >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/frame"
+
+      />
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:id="@+id/win_loose_msg"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+
+
+        />
+
+</RelativeLayout>
